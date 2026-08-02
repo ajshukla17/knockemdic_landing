@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <!-- Background with Clinical Teal Gradient -->
+  <rect width="1200" height="630" fill="#063B35"/>
+  <circle cx="1000" cy="150" r="350" fill="#0D5C53" opacity="0.6"/>
+  <circle cx="200" cy="500" r="300" fill="#FF5A36" opacity="0.15"/>
+
+  <!-- Grid Overlay -->
+  <path d="M 0 100 L 1200 100 M 0 200 L 1200 200 M 0 300 L 1200 300 M 0 400 L 1200 400 M 0 500 L 1200 500" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- Logo Component -->
+  <g transform="translate(100, 120) scale(1.4)">
+    <path d="M 15 50 L 32 50 L 40 37 L 52 75 L 62 18 L 100 56 L 125 32" stroke="#10B981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 100 56 L 122 75" stroke="#10B981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 108 30 L 128 30 L 128 50" stroke="#10B981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="145" y="65" font-family="sans-serif" font-weight="900" font-size="46" fill="#FFFFFF">Knock</text>
+    <path d="M 224 45 C 224 40, 234 40, 234 45 L 234 52 C 234 57, 224 57, 224 52 Z" stroke="#34D399" stroke-width="2.5" fill="none"/>
+    <circle cx="229" cy="56" r="2.5" fill="#34D399"/>
+    <text x="278" y="65" font-family="sans-serif" font-weight="900" font-size="46" fill="#FFFFFF">Medic</text>
+    <path d="M 402 30 L 402 46 M 394 38 L 410 38" stroke="#FF5A36" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Headline & Subtitle -->
+  <text x="100" y="340" font-family="sans-serif" font-weight="800" font-size="52" fill="#FFFFFF">Healthcare that comes to you in minutes.</text>
+  <text x="100" y="410" font-family="sans-serif" font-weight="500" font-size="28" fill="#A7F3D0">15,000+ Verified Doctors • 24/7 Ambulance SOS • Home Labs • AI Triage</text>
+
+  <!-- Badges Footer -->
+  <g transform="translate(100, 480)">
+    <rect width="280" height="60" rx="20" fill="#FF5A36"/>
+    <text x="35" y="38" font-family="sans-serif" font-weight="800" font-size="20" fill="#FFFFFF">AMBULANCE SOS 24/7</text>
+
+    <rect x="305" width="280" height="60" rx="20" fill="#0D5C53" stroke="#10B981" stroke-width="2"/>
+    <text x="330" y="38" font-family="sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">INDIA CARE NETWORK</text>
+  </g>
+</svg>

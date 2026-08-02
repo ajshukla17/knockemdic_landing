@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" fill="none">
+  <!-- Stylized Pulse-K Icon with Upward Arrow -->
+  <path d="M 15 50 L 32 50 L 40 37 L 52 75 L 62 18 L 100 56 L 125 32" stroke="#0D5C53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 100 56 L 122 75" stroke="#0D5C53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Arrow Head -->
+  <path d="M 108 30 L 128 30 L 128 50" stroke="#0D5C53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wordmark: KnockMedic -->
+  <!-- "Knock" -->
+  <text x="145" y="65" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="46" fill="#0F172A" letter-spacing="-1">Knock</text>
+  
+  <!-- Stethoscope icon inside the 'o' of Knock -->
+  <path d="M 224 45 C 224 40, 234 40, 234 45 L 234 52 C 234 57, 224 57, 224 52 Z" stroke="#0D5C53" stroke-width="2.5" fill="none"/>
+  <circle cx="229" cy="56" r="2.5" fill="#0D5C53"/>
+
+  <!-- "Medic" -->
+  <text x="278" y="65" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="900" font-size="46" fill="#0F172A" letter-spacing="-1">Medic</text>
+
+  <!-- Medical Cross (+) in Accent Coral -->
+  <path d="M 402 30 L 402 46 M 394 38 L 410 38" stroke="#FF5A36" stroke-width="7" stroke-linecap="round"/>
+</svg>

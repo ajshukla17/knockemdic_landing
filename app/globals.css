@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #0D5C53;
+    --primary-dark: #063B35;
+    --primary-light: #E6F4F1;
+    --primary-muted: #1A7A6F;
+    --accent-emergency: #FF5A36;
+    --accent-emergency-hover: #E04322;
+    --accent-amber: #F59E0B;
+    --surface: #FAFAFA;
+    --surface-alt: #F3F4F6;
+    --surface-card: #FFFFFF;
+    --ink: #0F172A;
+    --ink-muted: #64748B;
+    --ink-light: #94A3B8;
+    --border-light: #E2E8F0;
+  }
+}
+
+@theme {
+  --color-primary: #0D5C53;
+  --color-primary-dark: #063B35;
+  --color-primary-light: #E6F4F1;
+  --color-primary-muted: #1A7A6F;
+  --color-accent-emergency: #FF5A36;
+  --color-accent-emergency-hover: #E04322;
+  --color-accent-amber: #F59E0B;
+  --color-surface: #FAFAFA;
+  --color-surface-alt: #F3F4F6;
+  --color-surface-card: #FFFFFF;
+  --color-ink: #0F172A;
+  --color-ink-muted: #64748B;
+  --color-ink-light: #94A3B8;
+  --color-border-light: #E2E8F0;
+  --font-heading: var(--font-jakarta), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Animations & Effects */
+@keyframes sosPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 90, 54, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(255, 90, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 90, 54, 0);
+  }
+}
+
+.animate-sos-pulse {
+  animation: sosPulse 2s infinite;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
