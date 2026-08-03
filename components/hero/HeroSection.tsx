@@ -32,7 +32,7 @@ export function HeroSection() {
 
               {/* One-Line Value Prop Headline */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-                Healthcare that comes to you — <span className="text-[#0D5C53] underline decoration-[#FF5A36]/40 underline-offset-8">in minutes</span>, not hours.
+                Rapid Care, Right there .
               </h1>
 
               {/* Subline */}

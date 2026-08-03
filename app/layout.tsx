@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'KnockMedic - Healthcare That Comes To You',
+    title: 'KnockMedic - Rapis Care, Right there ',
     description:
       'Book doctor appointments, request instant 24/7 ambulance SOS, order lab tests at home, and get AI health guidance across India.',
     url: 'https://knockmedic.in',

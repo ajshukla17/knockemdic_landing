@@ -1,6 +1,6 @@
 export const BRAND_CONFIG = {
   name: 'KnockMedic',
-  tagline: 'Healthcare That Comes To You',
+  tagline: 'Rapid Care, Right there',
   logo: {
     src: '/images/logo.png', // Official transparent PNG asset (874x248, 3.52:1 ratio)
     alt: 'KnockMedic',
