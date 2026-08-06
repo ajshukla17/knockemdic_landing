@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
-import { BRAND_CONFIG } from '@/lib/constants';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -49,11 +49,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
       <body className="antialiased bg-[#FAFAFA] text-[#0F172A] selection:bg-[#E6F4F1] selection:text-[#0D5C53]">
         {children}
       </body>
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
 }

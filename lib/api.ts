@@ -181,11 +181,45 @@ export async function fetchDoctors(limit = 8, specialization?: string): Promise<
   }
 }
 
-function normalizeDoctor(doc: Record<string, any>): Doctor {
+interface RawDoctor {
+  _id?: string;
+  id?: string;
+  name?: string;
+  specialization?: string;
+  qualifications?: unknown[];
+  experience?: number;
+  languages?: string[];
+  profilePhoto?: string;
+  about?: string;
+  clinicName?: string;
+  clinicAddress?: {
+    city?: string;
+    line1?: string;
+    address?: string;
+  };
+  hospitalAffiliations?: string[];
+  fees?: {
+    clinic?: number;
+    video?: number;
+  };
+  averageRating?: number | string;
+  totalReviews?: number | string;
+  totalAppointments?: number | string;
+  isOnline?: boolean;
+  acceptingAppointments?: boolean;
+  consultationModes?: {
+    clinic?: boolean;
+    video?: boolean;
+  };
+}
+
+function normalizeDoctor(doc: Doctor | RawDoctor): Doctor {
+  const d = doc as RawDoctor;
+
   // Normalize qualifications (strings vs objects)
   let normalizedQuals: string[] = ['MBBS'];
-  if (Array.isArray(doc.qualifications) && doc.qualifications.length > 0) {
-    normalizedQuals = doc.qualifications
+  if (Array.isArray(d.qualifications) && d.qualifications.length > 0) {
+    normalizedQuals = d.qualifications
       .map((q: unknown) => {
         if (typeof q === 'string') return q;
         if (q && typeof q === 'object' && 'degree' in q && typeof q.degree === 'string') return q.degree;
@@ -195,32 +229,32 @@ function normalizeDoctor(doc: Record<string, any>): Doctor {
   }
 
   return {
-    _id: doc._id || doc.id || Math.random().toString(),
-    name: doc.name || 'Verified Doctor',
-    specialization: doc.specialization || 'General Physician',
+    _id: d._id || d.id || Math.random().toString(),
+    name: d.name || 'Verified Doctor',
+    specialization: d.specialization || 'General Physician',
     qualifications: normalizedQuals.length > 0 ? normalizedQuals : ['MBBS'],
-    experience: doc.experience ?? 5,
-    languages: doc.languages || ['English', 'Hindi'],
-    profilePhoto: doc.profilePhoto || FALLBACK_PHOTO,
-    about: doc.about || '',
-    clinicName: doc.clinicName || 'KnockMedic Network Hospital',
+    experience: d.experience ?? 5,
+    languages: d.languages || ['English', 'Hindi'],
+    profilePhoto: d.profilePhoto || FALLBACK_PHOTO,
+    about: d.about || '',
+    clinicName: d.clinicName || 'KnockMedic Network Hospital',
     clinicAddress: {
-      city: doc.clinicAddress?.city || 'India',
-      address: doc.clinicAddress?.line1 || '',
+      city: d.clinicAddress?.city || 'India',
+      address: d.clinicAddress?.line1 || d.clinicAddress?.address || '',
     },
     fees: {
-      clinic: doc.fees?.clinic || 500,
-      video: doc.fees?.video || 400,
+      clinic: d.fees?.clinic || 500,
+      video: d.fees?.video || 400,
     },
     consultationModes: {
-      clinic: doc.consultationModes?.clinic ?? true,
-      video: doc.consultationModes?.video ?? true,
+      clinic: d.consultationModes?.clinic ?? true,
+      video: d.consultationModes?.video ?? true,
     },
-    averageRating: doc.averageRating != null ? Number(doc.averageRating) : 4.8,
-    totalReviews: doc.totalReviews != null ? Number(doc.totalReviews) : 120,
-    totalAppointments: doc.totalAppointments != null ? Number(doc.totalAppointments) : 500,
-    isOnline: Boolean(doc.isOnline),
-    acceptingAppointments: doc.acceptingAppointments ?? true,
+    averageRating: d.averageRating != null ? Number(d.averageRating) : 4.8,
+    totalReviews: d.totalReviews != null ? Number(d.totalReviews) : 120,
+    totalAppointments: d.totalAppointments != null ? Number(d.totalAppointments) : 500,
+    isOnline: Boolean(d.isOnline),
+    acceptingAppointments: d.acceptingAppointments ?? true,
   };
 }
 
