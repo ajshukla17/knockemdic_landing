@@ -6,9 +6,9 @@ import { Footer } from '@/components/footer/Footer';
 import { Search, CalendarCheck, Video, FileText, Ambulance, Navigation, ShieldAlert, TestTube2, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Patient User Journeys - KnockMedic',
+  title: 'How It Works | Patient User Journeys',
   description:
-    'Learn how KnockMedic simplifies healthcare: step-by-step guides for booking doctor appointments, emergency 24/7 ambulance SOS dispatch, and doorstep lab tests.',
+    'Learn how to book online doctor consultations, request emergency 24/7 ambulance dispatch, and order home lab test packages on KnockMedic.',
 };
 
 export default function HowItWorksPage() {

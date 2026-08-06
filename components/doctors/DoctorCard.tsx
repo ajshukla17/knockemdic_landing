@@ -32,11 +32,13 @@ function resolvePhotoSrc(photoUrl?: string): string {
 }
 
 export function DoctorCard({ doctor }: DoctorCardProps) {
+  const [prevPhoto, setPrevPhoto] = React.useState(doctor.profilePhoto);
   const [photoSrc, setPhotoSrc] = React.useState(() => resolvePhotoSrc(doctor.profilePhoto));
 
-  React.useEffect(() => {
+  if (doctor.profilePhoto !== prevPhoto) {
+    setPrevPhoto(doctor.profilePhoto);
     setPhotoSrc(resolvePhotoSrc(doctor.profilePhoto));
-  }, [doctor.profilePhoto]);
+  }
 
   const handleImageError = () => {
     setPhotoSrc(PLACEHOLDER_PHOTO);

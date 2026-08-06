@@ -76,6 +76,7 @@ export function CityDropdown({ selectedCity, onSelectCity, cities }: CityDropdow
         onKeyDown={handleKeyDown}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
+        aria-controls="city-listbox"
         role="combobox"
         aria-label="Filter by City"
         className={`w-full flex items-center justify-between px-4 py-3 bg-slate-50 rounded-2xl border transition-all duration-200 cursor-pointer shadow-sm ${
@@ -101,6 +102,7 @@ export function CityDropdown({ selectedCity, onSelectCity, cities }: CityDropdow
       {/* Custom Styled Listbox Panel */}
       {isOpen && (
         <div
+          id="city-listbox"
           role="listbox"
           aria-label="Cities list"
           className="absolute z-30 top-full left-0 right-0 mt-2 bg-white rounded-2xl border border-slate-200/90 shadow-xl shadow-slate-900/10 py-1.5 max-h-64 overflow-y-auto animate-in fade-in zoom-in-95 duration-150"

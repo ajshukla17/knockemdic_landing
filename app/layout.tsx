@@ -18,18 +18,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://knockmedic.in'),
-  title: 'KnockMedic - Instant Doctor Appointments & 24/7 Ambulance SOS India',
+  metadataBase: new URL('https://knockmedic.com'),
+  title: {
+    default: 'KnockMedic – Doctors, Hospitals, Lab Tests & Ambulance Booking Online in India',
+    template: '%s | KnockMedic',
+  },
   description:
-    'KnockMedic connects patients across India with 15,000+ verified doctors, instant emergency ambulance dispatch (<10 min average ETA), home lab diagnostics, and AI symptom triage.',
-  keywords: [
-    'Doctor Booking India',
-    'Ambulance SOS Dispatch',
-    'Online Doctor Consultation',
-    'Telemedicine India',
-    'Lab Tests at Home',
-    'KnockMedic App',
-  ],
+    'Book doctor appointments online, request 24/7 emergency ambulance SOS, and schedule home lab tests across India on KnockMedic.',
   authors: [{ name: 'KnockMedic Health Technologies' }],
   icons: {
     icon: [
@@ -40,32 +35,12 @@ export const metadata: Metadata = {
       { url: '/apple-icon.png', type: 'image/png' },
     ],
   },
-  openGraph: {
-    title: 'KnockMedic - Rapis Care, Right there ',
-    description:
-      'Book doctor appointments, request instant 24/7 ambulance SOS, order lab tests at home, and get AI health guidance across India.',
-    url: 'https://knockmedic.in',
-    siteName: 'KnockMedic',
-    images: [
-      {
-        url: BRAND_CONFIG.ogImage,
-        width: 1200,
-        height: 630,
-        alt: 'KnockMedic - Official Brand Logo & Emergency Dispatch Network',
-      },
-    ],
-    locale: 'en_IN',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'KnockMedic - Emergency Ambulance SOS & Verified Doctors',
-    description: 'Instant healthcare booking and 24/7 emergency dispatch in India.',
-    images: [BRAND_CONFIG.ogImage],
-  },
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 

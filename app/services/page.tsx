@@ -6,9 +6,9 @@ import { Footer } from '@/components/footer/Footer';
 import { Stethoscope, Ambulance, TestTube2, Bot, ArrowRight, CheckCircle2, ShieldAlert, Sparkles, Clock, PhoneCall } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Services | Doctor Consults, Ambulance SOS & Home Labs - KnockMedic',
+  title: 'Healthcare Services | Doctor Consults, Ambulance SOS & Home Labs',
   description:
-    'Explore KnockMedic’s complete healthcare suite: instant video & clinic doctor bookings, 24/7 GPS ambulance dispatch, home lab sample collection, and AI symptom triage across India.',
+    'Explore KnockMedic healthcare services: instant doctor booking app, 24/7 ambulance booking online, doorstep lab tests at home & AI triage.',
 };
 
 export default function ServicesPage() {

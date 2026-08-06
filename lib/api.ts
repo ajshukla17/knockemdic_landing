@@ -181,14 +181,14 @@ export async function fetchDoctors(limit = 8, specialization?: string): Promise<
   }
 }
 
-function normalizeDoctor(doc: any): Doctor {
+function normalizeDoctor(doc: Record<string, any>): Doctor {
   // Normalize qualifications (strings vs objects)
   let normalizedQuals: string[] = ['MBBS'];
   if (Array.isArray(doc.qualifications) && doc.qualifications.length > 0) {
     normalizedQuals = doc.qualifications
-      .map((q: any) => {
+      .map((q: unknown) => {
         if (typeof q === 'string') return q;
-        if (q && typeof q === 'object' && q.degree) return q.degree;
+        if (q && typeof q === 'object' && 'degree' in q && typeof q.degree === 'string') return q.degree;
         return null;
       })
       .filter(Boolean) as string[];

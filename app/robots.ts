@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://knockmedic.in/sitemap.xml',
+    sitemap: 'https://knockmedic.com/sitemap.xml',
   };
 }

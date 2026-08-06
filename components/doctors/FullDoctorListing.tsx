@@ -86,10 +86,12 @@ export function FullDoctorListing({ initialDoctors }: FullDoctorListingProps) {
     });
   }, [initialDoctors, selectedSpecialty, selectedCity, searchQuery]);
 
-  // Reset page when filters change
-  React.useEffect(() => {
+  const filterKey = `${searchQuery}-${selectedSpecialty}-${selectedCity}`;
+  const [prevFilterKey, setPrevFilterKey] = React.useState(filterKey);
+  if (prevFilterKey !== filterKey) {
+    setPrevFilterKey(filterKey);
     setCurrentPage(1);
-  }, [searchQuery, selectedSpecialty, selectedCity]);
+  }
 
   // Pagination calculation
   const totalPages = Math.ceil(filteredDoctors.length / ITEMS_PER_PAGE) || 1;

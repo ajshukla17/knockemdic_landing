@@ -3,12 +3,12 @@ import React from 'react';
 import Image from 'next/image';
 import { Navbar } from '@/components/nav/Navbar';
 import { Footer } from '@/components/footer/Footer';
-import { Star, Quote, CheckCircle2, ShieldCheck, Heart } from 'lucide-react';
+import { Star, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Patient & Doctor Reviews | Ratings & Testimonials - KnockMedic',
+  title: 'Patient & Doctor Reviews & Ratings',
   description:
-    'Read verified patient stories and consulting doctor reviews. Rated 4.9/5 across 50,000+ appointments, emergency ambulance SOS dispatches, and lab tests in India.',
+    'Read verified patient reviews and ratings for online doctor appointments, emergency 24/7 ambulance SOS dispatch & doorstep lab test bookings.',
 };
 
 export default function ReviewsPage() {

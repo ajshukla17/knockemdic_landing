@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ShieldAlert, Mail, ChevronRight, List, ArrowLeft, Lock, FileText, CheckCircle } from 'lucide-react';
+import { ShieldAlert, Mail, ChevronRight, List, Lock, FileText, CheckCircle } from 'lucide-react';
 import { LegalDocument } from '@/content/legal/types';
 import { Navbar } from '../nav/Navbar';
 import { Footer } from '../footer/Footer';

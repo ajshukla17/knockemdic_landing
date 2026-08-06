@@ -31,13 +31,13 @@ export function HeroSection() {
               </div>
 
               {/* One-Line Value Prop Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
-                Rapid Care, Right there .
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+                KnockMedic – Doctors, Hospitals, Lab Tests &amp; Ambulance Booking Online in India
               </h1>
 
               {/* Subline */}
               <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-normal">
-                Book top-rated verified specialists, request instant emergency ambulance dispatch with live GPS tracking, and get home lab diagnostics anywhere across India.
+                India&apos;s all-in-one doctor appointment booking app. Request 24/7 emergency ambulance booking online (&lt;10 min ETA), order doorstep lab tests at home (ghar pe lab test), and access a nearby hospital finder instantly.
               </p>
 
               {/* Search Bar Widget */}

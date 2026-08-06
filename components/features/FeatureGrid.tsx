@@ -42,7 +42,7 @@ export function FeatureGrid() {
                 </h3>
 
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                  Book instant video calls or in-person clinic appointments with top specialists across India. Zero waiting rooms with digital slot booking.
+                  Use India&apos;s leading doctor appointment booking app. Book instant video calls or clinic visits with top specialists and find nearby hospital doctors with zero waiting times.
                 </p>
 
                 <ul className="space-y-2 text-xs font-semibold text-slate-700 mb-8">

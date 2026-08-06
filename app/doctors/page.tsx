@@ -8,9 +8,9 @@ import { Footer } from '@/components/footer/Footer';
 import { UserCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Find & Book Top Verified Doctors India | KnockMedic',
+  title: 'Find & Book Top Verified Doctors & Hospitals Near You Online',
   description:
-    'Search and book appointments with 15,000+ verified cardiologists, pediatricians, dermatologists, physicians, and specialists across India.',
+    'Search and book online doctor appointments with 15,000+ verified specialists & hospitals across India. Video consults & clinic visits. Book today!',
 };
 
 export default async function DoctorsPage() {
