@@ -134,7 +134,8 @@ const FALLBACK_DOCTORS: Doctor[] = [
 ];
 
 export async function fetchDoctors(limit = 8, specialization?: string): Promise<Doctor[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL ;
+  const rawUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api/v1').trim().replace(/\/+$/, '');
+  const baseUrl = rawUrl.endsWith('/api/v1') ? rawUrl : `${rawUrl}/api/v1`;
 
   try {
     const queryParams = new URLSearchParams();

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Menu, X, ArrowRight, ShieldAlert } from 'lucide-react';
 import { EmergencyModal } from '../sos/EmergencyModal';
 import { BRAND_CONFIG } from '@/lib/constants';
-import { getDoctorPortalUrl } from '@/lib/config';
+import { getDoctorPortalUrl, getHospitalPortalUrl } from '@/lib/config';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +14,7 @@ export function Navbar() {
   const [isSosOpen, setIsSosOpen] = useState(false);
 
   const doctorPortalUrl = getDoctorPortalUrl();
+  const hospitalPortalUrl = getHospitalPortalUrl();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,14 +64,23 @@ export function Navbar() {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-4">
               {/* Secondary Doctor & Lab Login Link */}
               <a
                 href={doctorPortalUrl}
-                className="text-xs font-semibold text-slate-600 hover:text-[#0D5C53] transition-colors px-2.5 py-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D5C53]/30"
+                className="text-xs font-semibold text-slate-600 hover:text-[#0D5C53] transition-colors px-2 py-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D5C53]/30"
                 aria-label="Doctor and Lab Partner Portal Login"
               >
                 Doctor &amp; Lab Login &rarr;
+              </a>
+
+              {/* Secondary Hospital Portal Login Link */}
+              <a
+                href={hospitalPortalUrl}
+                className="text-xs font-semibold text-slate-600 hover:text-[#0D5C53] transition-colors px-2 py-1.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0D5C53]/30"
+                aria-label="Hospital Partner Portal Login"
+              >
+                Hospital Portal &rarr;
               </a>
 
               {/* Always visible Emergency SOS button */}
@@ -154,6 +164,14 @@ export function Navbar() {
                 aria-label="Doctor and Lab Partner Portal Login"
               >
                 <span>Doctor &amp; Lab Portal Login &rarr;</span>
+              </a>
+              <a
+                href={hospitalPortalUrl}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="py-2 text-xs font-bold text-[#0D5C53] hover:underline flex items-center space-x-1"
+                aria-label="Hospital Partner Portal Login"
+              >
+                <span>Hospital Portal Login &rarr;</span>
               </a>
             </nav>
 

@@ -3,6 +3,7 @@
  */
 
 const DEFAULT_DOCTOR_PORTAL_URL = 'https://partners.knockmedic.com';
+const DEFAULT_HOSPITAL_PORTAL_URL = 'https://hospital.knockmedic.com';
 
 /**
  * Returns the URL for the Doctor & Lab Partner portal.
@@ -19,6 +20,26 @@ export function getDoctorPortalUrl(): string {
       );
     }
     return DEFAULT_DOCTOR_PORTAL_URL;
+  }
+
+  return envUrl;
+}
+
+/**
+ * Returns the URL for the Hospital Partner portal.
+ * Handles missing environment variables safely across dev and production.
+ */
+export function getHospitalPortalUrl(): string {
+  const envUrl = process.env.NEXT_PUBLIC_HOSPITAL_PORTAL_URL;
+
+  if (!envUrl) {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(
+        '[KnockMedic Warning]: NEXT_PUBLIC_HOSPITAL_PORTAL_URL is not set. Falling back to default:',
+        DEFAULT_HOSPITAL_PORTAL_URL
+      );
+    }
+    return DEFAULT_HOSPITAL_PORTAL_URL;
   }
 
   return envUrl;
