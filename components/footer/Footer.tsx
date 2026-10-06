@@ -47,15 +47,14 @@ export function Footer() {
             <div className="pt-2 space-y-2 text-slate-300">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-[#0D5C53]" />
-                <span>KnockMedic Healthcare Technologies Pvt Ltd, Indiranagar, Bengaluru, KA 560038</span>
+                <span>KnockMedic </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#0D5C53]" />
                 <span>knockmedic@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <PhoneCall className="w-4 h-4 text-[#0D5C53]" />
-                <span></span>
+                
               </div>
             </div>
           </div>
@@ -164,7 +163,7 @@ export function Footer() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-slate-900 text-slate-400">
-            <div>© {new Date().getFullYear()} KnockMedic Health Technologies Pvt Ltd. All rights reserved.</div>
+            <div>© {new Date().getFullYear()} KnockMedic . All rights reserved.</div>
             <div className="flex items-center space-x-1 mt-2 sm:mt-0">
               <span>Made with</span>
               <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />

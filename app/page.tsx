@@ -10,6 +10,7 @@ import { FeatureGrid } from '@/components/features/FeatureGrid';
 import { Testimonials } from '@/components/testimonials/Testimonials';
 import { FaqSection } from '@/components/faq/FaqSection';
 import { Footer } from '@/components/footer/Footer';
+import { PatientEnquiryModal } from '@/components/enquiry/PatientEnquiryModal';
 
 export const metadata: Metadata = {
   title: 'KnockMedic – Doctors, Hospitals, Lab Tests & Ambulance Booking Online in India',
@@ -45,6 +46,7 @@ export default function HomePage() {
         <FaqSection />
 
         <Footer />
+        <PatientEnquiryModal />
       </main>
   );
 }

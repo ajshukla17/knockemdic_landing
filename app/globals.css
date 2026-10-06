@@ -109,3 +109,56 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
 }
+
+/* Patient Enquiry Modal Animations */
+@keyframes modalEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseHeartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.18);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.12);
+  }
+  56% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ecgLine {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-modal-entry {
+  animation: modalEntry 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-heartbeat {
+  animation: pulseHeartbeat 2.4s ease-in-out infinite;
+}
+
+.animate-ecg {
+  stroke-dasharray: 400;
+  animation: ecgLine 3.2s linear infinite;
+}
+
